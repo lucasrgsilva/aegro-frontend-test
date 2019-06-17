@@ -5,15 +5,15 @@
 <table mat-table [dataSource]="areas" class="mat-elevation-z8">
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let area"> {{ area.name }} </td>
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let area" [routerLink]="[area.id]"> {{ area.name }} </td>
     <td mat-footer-cell *matFooterCellDef> Total </td>
   </ng-container>
 
   <!-- Hectares Column -->
   <ng-container matColumnDef="hectares">
     <th mat-header-cell *matHeaderCellDef> Área/Hectares </th>
-    <td mat-cell *matCellDef="let area"> {{ area.hectares | number }} </td>
+    <td mat-cell *matCellDef="let area" [routerLink]="[area.id]"> {{ area.hectares | number }} </td>
     <td mat-footer-cell *matFooterCellDef> {{ totalArea | number }} </td>
   </ng-container>
 

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Safra</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="crop.name" placeholder="Nome">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Data" [(ngModel)]="crop.date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="">Cancelar</button>
+  <button mat-button (click)="onCloseConfirm()" [disabled]="!crop.name || !crop.date"
+    color="primary">Salvar</button>
+</div>

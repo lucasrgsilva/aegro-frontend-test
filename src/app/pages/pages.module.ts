@@ -6,9 +6,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatDialogModule, MatInputModule } from '@angular/material';
+import { MatDialogModule, MatInputModule, MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ModalAreaFormComponent } from './areas/modal-area-form/modal-area-form.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AreasComponent } from './areas/areas.component';
 import { CropsComponent } from './crops/crops.component';
@@ -18,6 +18,8 @@ import { LayoutModule } from '../layout/layout.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { ModalConfirmationComponent } from './shared/modal-confirmation/modal-confirmation.component';
+import { ModalCropFormComponent } from './crops/modal-crop-form/modal-crop-form.component';
+import { ModalAreaFormComponent } from './areas/modal-area-form/modal-area-form.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ModalConfirmationComponent } from './shared/modal-confirmation/modal-co
     PagesComponent,
     ModalAreaFormComponent,
     ModalConfirmationComponent,
+    ModalCropFormComponent,
   ],
   imports: [
     CommonModule,
@@ -40,11 +43,14 @@ import { ModalConfirmationComponent } from './shared/modal-confirmation/modal-co
     MatMenuModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   entryComponents: [
     ModalAreaFormComponent,
     ModalConfirmationComponent,
+    ModalCropFormComponent,
   ],
 })
 export class PagesModule { }

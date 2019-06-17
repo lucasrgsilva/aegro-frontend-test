@@ -3,19 +3,6 @@ table {
   margin: 1rem auto;
 }
 
-tr.mat-row:hover {
-  box-shadow: 
-    0 0, 
-    -1rem 0 .5rem rgba(0, 0, 0, 0.12), 
-    0 0, 
-    +1rem 0 .5rem rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
-
-tr.mat-footer-row {
-  font-weight: bold;
-}
-
 .docs-primary-header {
   padding-left: 15%;
 }
@@ -35,7 +22,7 @@ tr.mat-footer-row {
   }
 }
 
-.mat-column-hectares {
+.mat-column-date {
   width: 30%;
   &:focus {
     outline: none;

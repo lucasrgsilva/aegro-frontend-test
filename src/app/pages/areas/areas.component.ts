@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material';
 import { ModalAreaFormComponent } from './modal-area-form/modal-area-form.component';
 import { IArea, AreasService } from './areas.service';
 import { ModalConfirmationComponent } from '../shared/modal-confirmation/modal-confirmation.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-areas',
@@ -20,6 +21,8 @@ export class AreasComponent implements OnInit {
     private areaService: AreasService,
     private farmService: FarmsService,
     public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
