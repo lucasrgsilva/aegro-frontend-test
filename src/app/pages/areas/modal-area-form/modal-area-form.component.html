@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Area</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="area.name" placeholder="Nome">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]="area.hectares" placeholder="Hectares">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="area" >Cancelar</button>
+  <button mat-button (click)="onCloseConfirm()" [disabled]="!area.name || !area.hectares" color="primary">Salvar</button>
+</div>

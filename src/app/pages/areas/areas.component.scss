@@ -1,0 +1,40 @@
+table {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.docs-primary-header {
+  // background: #4caf4f;;
+  padding-left: 15%;
+}
+
+.docs-primary-header h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.mat-column-name {
+  width: 50%;
+}
+
+.mat-column-hectares {
+  width: 30%;
+}
+
+.mat-column-actions {
+  width: 20%;
+}
+
+.float-add-button {
+  bottom: 0;
+  position: fixed;
+  margin: 2rem;
+  right: 0;
+}
