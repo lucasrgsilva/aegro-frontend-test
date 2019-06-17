@@ -6,9 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatDialogModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatDialogModule, MatInputModule, MatNativeDateModule, MatCardModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { ChartsModule } from 'ng2-charts';
 
 import { AreasComponent } from './areas/areas.component';
 import { CropsComponent } from './crops/crops.component';
@@ -45,7 +46,9 @@ import { ModalAreaFormComponent } from './areas/modal-area-form/modal-area-form.
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ChartsModule,
+    MatCardModule,
   ],
   entryComponents: [
     ModalAreaFormComponent,

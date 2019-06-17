@@ -20,7 +20,7 @@ export class ModalCropFormComponent implements OnInit {
   ngOnInit() {
     this.crop = { 
       ...this.data.crop, 
-      farmID: this.data.areaID,
+      farmID: this.data.farmID,
       areaID: this.data.areaID
     };
   }

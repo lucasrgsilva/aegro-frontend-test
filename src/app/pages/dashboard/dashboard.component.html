@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="docs-primary-header">
+    <h1>Safras </h1>
+  </div>
+      
+  <mat-card *ngIf='loaded'>
+    <canvas baseChart
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins">
+    </canvas>
+  </mat-card>
+
+</div>

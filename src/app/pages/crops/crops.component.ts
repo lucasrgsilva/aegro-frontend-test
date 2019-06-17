@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FarmsService, IFarm } from '../farms/farms.service';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
@@ -13,7 +13,7 @@ import { ModalCropFormComponent } from './modal-crop-form/modal-crop-form.compon
   templateUrl: './crops.component.html',
   styleUrls: ['./crops.component.scss']
 })
-export class CropsComponent implements OnInit {
+export class CropsComponent implements OnInit, OnDestroy {
   areaID: string;
   crops: ICrop[] = [];
   farm: IFarm;
@@ -58,5 +58,9 @@ export class CropsComponent implements OnInit {
       data: { crop, farmID: this.farm.id, areaID: this.areaID },
       autoFocus: false
     }).afterClosed().subscribe();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
