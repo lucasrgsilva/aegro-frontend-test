@@ -1,3 +1,27 @@
-<p>
-  header works!
-</p>
+<mat-toolbar class="header">
+  <img alt="Aegro Logo" src="./../../../assets/aegro.svg" class="header-logo">
+
+  <div class="header-spacer"></div>
+
+  <mat-form-field>
+    <mat-select [(ngModel)]="selectedFarm">
+      <mat-option *ngFor="let farm of farms" [value]="farm">
+        {{ farm.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="header-spacer"></div>
+
+  <a mat-button routerLink="crops">
+    <span>Safras</span>
+  </a>
+
+  <a mat-button routerLink="areas">
+    <span>Áreas</span>
+  </a>
+
+  <a mat-button routerLink="/">
+    <mat-icon aria-label="Home icon">home</mat-icon>
+  </a>
+</mat-toolbar>
